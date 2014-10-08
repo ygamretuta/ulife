@@ -22,6 +22,8 @@
 //= require jqBootstrapValidation
 //= require contact_me
 
+//= require jquery.blockUI
+
 //= require agency
 
 //= require_tree .

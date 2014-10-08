@@ -8,6 +8,8 @@
     = google_webfonts_init({google:['Montserrat:400,700', 'Kaushan+Script', 'Droid+Serif:400,700,400italic,700italic', 'Roboto+Slab:400,100,300,700']})
     = csrf_meta_tags
   %body{id:'page-top', class:"#{controller_name} #{action_name}"}
+    #spinner{style:'display:none'}
+      = image_tag 'spinner.png', class:'dead-center'
     %nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header.page-scroll
