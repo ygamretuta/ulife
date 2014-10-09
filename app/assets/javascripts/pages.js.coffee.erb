@@ -17,4 +17,11 @@ $(->
         complete: (data) ->
             $.unblockUI()
             return
+
+    $(window).resize( ->
+        if $(window).width() < 900
+            $('.logo-text').text('PHNL')
+        else
+            $('.logo-text').text('Pranic Healing Northern Luzon')
+    )
 )

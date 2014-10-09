@@ -19,7 +19,7 @@
             %span.icon-bar
           %a.navbar-brand.page-scroll{:href => "#page-top"}
             = image_tag 'logo.png'
-            Pranic Healing Northern Luzon
+            %span.logo-text Pranic Healing Northern Luzon
 
         .navbar-collapse.collapse#bs-example-navbar-collapse-1
           %ul.nav.navbar-nav.navbar-right
@@ -39,6 +39,9 @@
 
             %li
               %a.page-scroll{href:'#contact'} Contact
+
+            %li
+              %a.page-scroll{href:'#testimonials'} Testimonials
 
 
     %header
@@ -367,8 +370,68 @@
                   #success
                   %button.btn.btn-xl{:type => "submit"} Send Message
 
+    %section#testimonials
+      .container
+        .row
+          .col-lg-12.text-center
+            %h2.section-heading Testimonials
+            %h3.section-subheading Hear what others have to say!
+        .row
+          .col-md-6.testimonial-container
+            %blockquote.testimonial
+              %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
 
+            .arrow-down
+            .testimonial-author
+              .row
+                .col-sm-2
+                  .testimonial-author-picture
+                    = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+                .col-sm-8
+                  = "Ygam Retuta | "
+                  %span web developer
 
+          .col-md-6.testimonial-container
+            %blockquote.testimonial
+              %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+            .arrow-down
+            .testimonial-author
+              .row
+                .col-sm-2
+                  .testimonial-author-picture
+                    = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+                .col-sm-8
+                  = "Ygam Retuta | "
+                  %span web developer
+
+          .col-md-6.col-sm-12.testimonial-container
+            %blockquote.testimonial
+              %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+            .arrow-down
+            .testimonial-author
+              .row
+                .col-sm-2
+                  .testimonial-author-picture
+                    = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+                .col-sm-8
+                  = "Ygam Retuta | "
+                  %span web developer
+
+          .col-md-6.col-sm-12.testimonial-container
+            %blockquote.testimonial
+              %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+            .arrow-down
+            .testimonial-author
+              .row
+                .col-md-2
+                  .testimonial-author-picture
+                    = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+                .col-md-8
+                  = "Ygam Retuta | "
+                  %span web developer
     %footer
       .container
         .row
