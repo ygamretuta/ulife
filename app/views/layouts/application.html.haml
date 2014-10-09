@@ -2,14 +2,13 @@
 %html
   %head
     %title= content_for?(:title) ? yield(:title) : "Pranic Healing Northern Luzon"
+    = favicon_link_tag 'favicon.ico'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
     = google_webfonts_init({google:['Montserrat:400,700', 'Kaushan+Script', 'Droid+Serif:400,700,400italic,700italic', 'Roboto+Slab:400,100,300,700']})
     = csrf_meta_tags
   %body{id:'page-top', class:"#{controller_name} #{action_name}"}
-    #spinner{style:'display:none'}
-      = image_tag 'spinner.png', class:'dead-center'
     %nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header.page-scroll
