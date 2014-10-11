@@ -1,2 +1,450 @@
-%h1 Pages#landing
-%p Find me in app/views/pages/landing.html.haml
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header.page-scroll
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand.page-scroll{:href => "#page-top"}
+        = image_tag 'logo.png'
+        %span.logo-text Pranic Healing Northern Luzon
+
+    .navbar-collapse.collapse#bs-example-navbar-collapse-1
+      %ul.nav.navbar-nav.navbar-right
+        %li.hidden
+          %a{href:'#page-top'}
+        %li
+          %a.page-scroll{href:'#services'} Services
+
+        %li
+          %a.page-scroll{href:'#portfolio'} Courses
+
+        %li
+          %a.page-scroll{href:'#about'} About
+
+        %li
+          %a.page-scroll{href:'#team'} Leaders
+
+        %li
+          %a.page-scroll{href:'#contact'} Contact
+
+        %li
+          %a.page-scroll{href:'#testimonials'} Testimonials
+
+
+%header
+  .container
+    .intro-text
+      .intro-lead-in Welcome to Pranic Healing Northern Luzon!
+      .intro-heading It's Nice to Meet You!
+      %a.page-scroll.btn.btn-xl{href:'#services'} Tell Me More
+
+
+%section#services
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Services
+        %h3.section-subheading.text-muted
+          For lists of services and events by the Pranic Healing Foundation of the Philippines, please visit
+          = link_to 'the events page', 'http://www.pranichealing.com.ph/events', target:'_blank'
+          of the main website.
+
+
+    .row.text-center
+      .col-md-4
+        %span.fa-stack.fa-4x
+          %i.fa.fa-circle.fa-stack-2x.text-primary
+          %i.fa.fa-home.fa-stack-1x.fa-inverse
+        %h4.service-heading
+          Healing, Orientation, Meditation, Enlightenment (HOME)
+        %p.text-muted
+          Wednesdays, 6pm to 8:30pm @ 2A Brent Road, Baguio City
+
+      .col-md-4
+        %span.fa-stack.fa-4x
+          %i.fa.fa-circle.fa-stack-2x.text-primary
+          %i.fa.fa-heart.fa-stack-1x.fa-inverse
+        %h4.service-heading
+          Daily Meditations (Meditation on Twin Hearts)
+        %p.text-muted
+          Weekdays 6pm to 7pm @ 2A Brent Road, Baguio City
+
+      .col-md-4
+        %span.fa-stack.fa-4x
+          %i.fa.fa-circle.fa-stack-2x.text-primary
+          %i.fa.fa-home.fa-stack-1x.fa-inverse
+        %h4.service-heading
+          Healing, Orientation, Meditation, Enlightenment (HOME)
+        %p.text-muted
+          Wednesdays, 6pm to 8:30pm @ 2A Brent Road, Baguio City
+
+
+%section#portfolio.bg-light-gray
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Courses
+        %p.section-subheading.text-muted
+          The following are the courses offered in either the Region 1 or the Northern Luzon center. For
+          more courses offered by the Pranic Healing Foundation of the Philippines, please visit any of these links:
+          = link_to 'Higher Courses', 'http://www.pranichealing.com.ph/courses/higher/', target:'_blank'
+          ,
+          = link_to 'Spiritual Courses', 'http://www.pranichealing.com.ph/courses/spiritual/', target:'_blank'
+
+
+
+    .row
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{href:'#portfolioModal1', data:{toggle:'modal'}}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+
+          = image_tag 'basic.jpg', class:'img-responsive img-thumbnail'
+
+        .portfolio-caption
+          %h4 Basic Pranic Healing
+          %p.text-muted Introduction
+
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{href:'#portfolioModal2', data:{toggle:'modal'}}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+
+          = image_tag 'advanced.jpg', class:'img-responsive img-thumbnail'
+
+        .portfolio-caption
+          %h4 Advanced Pranic Healing
+          %p.text-muted Color Pranas and Phsyiological Healing
+
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{href:'#portfolioModal3', data:{toggle:'modal'}}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+
+          = image_tag 'psycho.jpg', class:'img-responsive img-thumbnail'
+
+        .portfolio-caption
+          %h4 Pranic Psychotherapy
+          %p.text-muted Psychological Healing
+
+    .row
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{href:'#portfolioModal4', data:{toggle:'modal'}}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+
+          = image_tag 'crystal.jpg', class:'img-responsive img-thumbnail'
+
+        .portfolio-caption
+          %h4 Pranic Crystal Healing
+          %p.text-muted Healing with Crystals
+
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{href:'#portfolioModal5', data:{toggle:'modal'}}
+          .portfolio-hover
+            .portfolio-hover-content
+              %i.fa.fa-plus.fa-3x
+
+          = image_tag 'aohs.jpg', class:'img-responsive img-thumbnail'
+
+        .portfolio-caption
+          %h4 Achieving Oneness with the Higher Soul
+          %p.text-muted Ancient Meditations, Soul Realization, Enlightenment and Self-Realization
+
+%section#about
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading About
+        %h3.section-subheading.text-muted
+          For more information about pranic healing, please visit the
+          = link_to 'the main website.', 'http://www.pranichealing.com.ph/about-us/what-is-pranic-healing'
+    .row
+      .col-lg-12
+        %ul.timeline
+          %li
+            .timeline-image
+              = image_tag 'about/what.jpg', class:'img-circle img-responsive'
+
+            .timeline-panel
+              .timeline-heading
+                %h4 What is Pranic Healing
+              .timeline-body
+                %p.text-muted Pranic Healing is described as the science and art of using energy to heal the body. All things are made of energy. Yet if there are disturbances to the energy bodies of an individual, 'dis-ease' will follow. What Pranic Healing does is to cleanse, energize and balance the energy systems, thereby promoting wellness and good health on all levels … physically, emotionally, mentally, and spiritually.
+
+          %li.timeline-inverted
+            .timeline-image
+              = image_tag 'about/master.jpg', class:'img-circle img-responsive'
+            .timeline-panel
+              .timeline-heading
+                %h4 Our Founder
+              .timeline-body
+                %p.text-muted Born in Cebu, Philippines, on August 15, 1952, Master Choa Kok Sui is the originator of modern Pranic Healing. Since ancient times, sages and mystics have been practicing the ideologies similar to Pranic Healing. However, it was through Master Choa Kok Sui’s tireless research, culminating in the book Miracles of Pranic Healing, that the practice of Pranic Healing was modernized and spread worldwide.
+
+          %li
+            .timeline-image
+              = image_tag 'about/master2.jpg', class:'img-circle img-responsive'
+            .timeline-panel
+              .timeline-heading
+                %h4 Our History
+              .timeline-body
+                %p.text-muted Established in 2002, the Pranic Healing Foundation of the Philippines (PHFP) is a non-stock, non-profit organization. Established by Grand Master Choa Kok Sui, the founder of modern Pranic Healing, it is one of the many branches of the World Pranic Healing Foundation.
+
+          %li.timeline-inverted
+            .timeline-image
+              = image_tag 'about/foundation.jpg', class:'img-circle img-responsive'
+            .timeline-panel
+              .timeline-heading
+                %h4 Charitable Foundations
+              .timeline-body
+                %p.text-muted
+                  Grand Master Choa Kok Sui, in his desire to help humanity, established this charitable institution to help people in need all over the world through the tithes and resources of grateful students for the priceless teachings and blessings he shared with them.
+                  For more details, please visit:
+                  = link_to 'this link', 'http://www.pranichealing.com.ph/about-us/charitable-foundations', target:'_blank'
+                  ="."
+
+
+
+%section#team.bg-light-gray
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Our Norther Luzon / Region 1 Chapter Leaders
+        %h3.section-subheading Leaders are for both Region 1 and Northern Luzon Centers
+
+
+    .row
+      .col-sm-4
+        .team-member
+          = image_tag 'team/jane.jpg', class:'img-responsive img-circle'
+          %h4 Jane Daguman
+          %p.text-muted Manager, Pranic Healer, Basic Pranic Healing Trainer
+
+          %ul.list-inline.social-buttons
+            %li
+              %a{href:'#'}
+                %i.fa.fa-twitter
+            %li
+              %a{href:'#'}
+                %i.fa.fa-facebook
+
+            %li
+              %a{href:'#'}
+                %i.fa.fa-linkedin
+
+      .col-sm-4
+        .team-member
+          = image_tag 'http://placehold.it/225x225', class:'img-responsive img-circle'
+          %h4 Len Regpala
+          %p.text-muted Certified Pranic Healer, Basic Pranic Healing Trainer
+
+          %ul.list-inline.social-buttons
+            %li
+              %a{href:'#'}
+                %i.fa.fa-twitter
+            %li
+              %a{href:'#'}
+                %i.fa.fa-facebook
+
+            %li
+              %a{href:'#'}
+                %i.fa.fa-linkedin
+    .row
+      .col-sm-4
+        .team-member
+          = image_tag 'team/madel.jpg', class:'img-responsive img-circle'
+          %h4 Madeline Retuta
+          %p.text-muted doctor, pranic healer
+          %ul.list-inline.social-buttons
+            %li
+              %a{href:'#'}
+                %i.fa.fa-twitter
+            %li
+              %a{href:'#'}
+                %i.fa.fa-facebook
+
+            %li
+              %a{href:'#'}
+                %i.fa.fa-linkedin
+
+      .col-sm-4
+        .team-member
+          = image_tag 'team/silver.jpg', class:'img-responsive img-circle'
+          %h4 Silverio Retuta
+          %p.text-muted doctor, pranic healer
+          %ul.list-inline.social-buttons
+            %li
+              %a{href:'#'}
+                %i.fa.fa-twitter
+            %li
+              %a{href:'#'}
+                %i.fa.fa-facebook
+
+            %li
+              %a{href:'#'}
+                %i.fa.fa-linkedin
+
+      .col-sm-4
+        .team-member
+          = image_tag 'team/ucc.jpg', class:'img-responsive img-circle'
+          %h4 Grace Bautista
+          %p.text-muted college instructor, Certified Pranic Healer
+          %ul.list-inline.social-buttons
+            %li
+              %a{href:'#'}
+                %i.fa.fa-twitter
+            %li
+              %a{href:'#'}
+                %i.fa.fa-facebook
+
+              %li
+                %a{href:'#'}
+                  %i.fa.fa-linkedin
+
+%section#contact
+  .container
+    .row{style: 'margin-top: 60px'}
+      .col-lg-6.col-lg-push-3
+        .quick-contacts
+          %h1 Quick Contacts
+
+          %p
+            Email us at
+            = mail_to 'address@example.com'
+
+          %p Mobile Number: 09178480447
+
+          %p Northern Luzon Center Landline: (074) 444-44-44
+
+          %p Region 1 Center Landline: (072) 607-04-80
+
+          %p
+            Northern Luzon Pranic Healing Center:
+            2A Brent Road, Baguio City
+
+          %p
+            Region 1 Pranic Healing Center:
+            151 Urbiztondo, San Juan La Union
+
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Contact Us
+
+    .row
+      .col-lg-12
+        %form#contactForm{name:'sentMessage', novalidate:true}
+          .row
+            .col-md-6
+              .form-group
+                %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text"}/
+                %p.help-block.text-danger
+              .form-group
+                %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email"}/
+                %p.help-block.text-danger
+              .form-group
+                %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel"}/
+                %p.help-block.text-danger
+            .col-md-6
+              .form-group
+                %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => ""}
+                %p.help-block.text-danger
+            .clearfix
+            .col-lg-12.text-center
+              #success
+              %button.btn.btn-xl{:type => "submit"} Send Message
+
+%section#testimonials
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Testimonials
+        %h3.section-subheading Hear what others have to say!
+    .row
+      .col-md-6.testimonial-container
+        %blockquote.testimonial
+          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+        .arrow-down
+        .testimonial-author
+          .row
+            .col-sm-2
+              .testimonial-author-picture
+                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+            .col-sm-8
+              = "Ygam Retuta | "
+              %span web developer
+
+      .col-md-6.testimonial-container
+        %blockquote.testimonial
+          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+        .arrow-down
+        .testimonial-author
+          .row
+            .col-sm-2
+              .testimonial-author-picture
+                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+            .col-sm-8
+              = "Ygam Retuta | "
+              %span web developer
+
+      .col-md-6.col-sm-12.testimonial-container
+        %blockquote.testimonial
+          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+        .arrow-down
+        .testimonial-author
+          .row
+            .col-sm-2
+              .testimonial-author-picture
+                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+            .col-sm-8
+              = "Ygam Retuta | "
+              %span web developer
+
+      .col-md-6.col-sm-12.testimonial-container
+        %blockquote.testimonial
+          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
+
+        .arrow-down
+        .testimonial-author
+          .row
+            .col-md-2
+              .testimonial-author-picture
+                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
+            .col-md-8
+              = "Ygam Retuta | "
+              %span web developer
+
+%footer
+  .container
+    .row
+      .col-md-4
+        %span.copyright Copyright &copy; Pranic Healing Foundation of the Philippines 2014
+
+      .col-md-4
+        %ul.list-inline.social-buttons
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-twitter
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-facebook
+          %li
+            %a{:href => "#"}
+              %i.fa.fa-linkedin
+
+      .col-md-4
+        %ul.list-inline.quicklinks
+          %li
+            %a{href:'#'}Privacy Policy
+          %li
+            %a{href:'#'}Terms of Use
+
+= render 'portfolios'
