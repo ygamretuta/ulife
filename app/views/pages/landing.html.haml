@@ -74,11 +74,31 @@
       .col-md-4
         %span.fa-stack.fa-4x
           %i.fa.fa-circle.fa-stack-2x.text-primary
-          %i.fa.fa-home.fa-stack-1x.fa-inverse
+          %i.fa.fa-child.fa-stack-1x.fa-inverse
         %h4.service-heading
-          Healing, Orientation, Meditation, Enlightenment (HOME)
+          Arhatic Meditations
         %p.text-muted
-          Wednesdays, 6pm to 8:30pm @ 2A Brent Road, Baguio City
+          Tuesdays 5pm, Saturdays 6pm @ 2A Brent Road, Baguio City
+
+    .row.text-center
+      .col-md-4
+        %span.fa-stack.fa-4x
+          %i.fa.fa-circle.fa-stack-2x.text-primary
+          %i.fa.fa-circle-o.fa-stack-1x.fa-inverse
+        %h4.service-heading
+          Twin Hearts Meditation (Every Full Moon)
+        %p.text-muted
+          6pm @ 2A Brent Road, Baguio City
+
+      .col-md-4
+        %span.fa-stack.fa-4x
+          %i.fa.fa-circle.fa-stack-2x.text-primary
+          %i.fa.fa-fire.fa-stack-1x.fa-inverse
+        %h4.service-heading
+          Pranic Feng Shui and Etheric Leansing of Home, Office and Businesses
+        %p.text-muted
+          by appointment, please
+          = link_to 'contact us', '#contact'
 
 
 %section#portfolio.bg-light-gray
@@ -318,9 +338,16 @@
             Email us at
             = mail_to 'address@example.com'
 
-          %p Mobile Number: 09178480447
+          %p
+            Region 1 Center
+            %br
+            Madeline Retuta: 09178480448
 
-          %p Northern Luzon Center Landline: (074) 444-44-44
+          %p
+            Northern Luzon Center
+            %br
+            Jane: 0947-450-2037
+            Len: 0927-203-8752
 
           %p Region 1 Center Landline: (072) 607-04-80
 
@@ -331,33 +358,6 @@
           %p
             Region 1 Pranic Healing Center:
             151 Urbiztondo, San Juan La Union
-
-    .row
-      .col-lg-12.text-center
-        %h2.section-heading Contact Us
-
-    .row
-      .col-lg-12
-        %form#contactForm{name:'sentMessage', novalidate:true}
-          .row
-            .col-md-6
-              .form-group
-                %input#name.form-control{"data-validation-required-message" => "Please enter your name.", :placeholder => "Your Name *", :required => "", :type => "text"}/
-                %p.help-block.text-danger
-              .form-group
-                %input#email.form-control{"data-validation-required-message" => "Please enter your email address.", :placeholder => "Your Email *", :required => "", :type => "email"}/
-                %p.help-block.text-danger
-              .form-group
-                %input#phone.form-control{"data-validation-required-message" => "Please enter your phone number.", :placeholder => "Your Phone *", :required => "", :type => "tel"}/
-                %p.help-block.text-danger
-            .col-md-6
-              .form-group
-                %textarea#message.form-control{"data-validation-required-message" => "Please enter a message.", :placeholder => "Your Message *", :required => ""}
-                %p.help-block.text-danger
-            .clearfix
-            .col-lg-12.text-center
-              #success
-              %button.btn.btn-xl{:type => "submit"} Send Message
 
 %section#testimonials
   .container
