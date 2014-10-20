@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-rails'
 gem 'google-webfonts-rails'
+gem 'httparty'
+gem 'figaro'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -23,6 +25,8 @@ group :development do
   gem 'spring'
   gem 'rack-livereload'
   gem 'guard-livereload', require: false
+  gem 'better_errors'
+  gem 'awesome_print'
 end
 
 group :development, :test do

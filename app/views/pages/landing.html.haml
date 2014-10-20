@@ -366,61 +366,21 @@
         %h2.section-heading Testimonials
         %h3.section-subheading Hear what others have to say!
     .row
-      .col-md-6.testimonial-container
-        %blockquote.testimonial
-          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
-
-        .arrow-down
-        .testimonial-author
-          .row
-            .col-sm-2
-              .testimonial-author-picture
-                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
-            .col-sm-8
-              = "Ygam Retuta | "
-              %span web developer
-
-      .col-md-6.testimonial-container
-        %blockquote.testimonial
-          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
-
-        .arrow-down
-        .testimonial-author
-          .row
-            .col-sm-2
-              .testimonial-author-picture
-                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
-            .col-sm-8
-              = "Ygam Retuta | "
-              %span web developer
-
-      .col-md-6.col-sm-12.testimonial-container
-        %blockquote.testimonial
-          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
-
-        .arrow-down
-        .testimonial-author
-          .row
-            .col-sm-2
-              .testimonial-author-picture
-                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
-            .col-sm-8
-              = "Ygam Retuta | "
-              %span web developer
-
-      .col-md-6.col-sm-12.testimonial-container
-        %blockquote.testimonial
-          %p I'm better, faster, stronger and I have a better handle of all the aspects of my life!
-
-        .arrow-down
-        .testimonial-author
-          .row
-            .col-md-2
-              .testimonial-author-picture
-                = image_tag 'testimonials/ygam.jpg', class:'img-responsive img-thumbnail'
-            .col-md-8
-              = "Ygam Retuta | "
-              %span web developer
+      - if @members.present? && @members['objects'].any?
+        - @members['objects'].each do |m|
+          .col-md-6.testimonial-container
+            %blockquote.testimonial
+              %p= m['testimonial'].html_safe
+            .arrow-down
+            .testimonial-author
+              .row
+                .col-sm-3
+                  .testimonial-author-picture
+                    = image_tag m['thumb'], class: 'img-circle img-thumbnail'
+                .col-sm-9
+                  = "#{m['name']} | "
+                  %span
+                    = m['title'].html_safe
 
 %footer
   .container
