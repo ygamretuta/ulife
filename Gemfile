@@ -37,4 +37,5 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
   gem 'non-stupid-digest-assets'
+  gem 'newrelic_rpm'
 end
