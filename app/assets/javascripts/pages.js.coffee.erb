@@ -13,10 +13,10 @@ $(->
         opacity: 10
         cursor: 'wait'
 
-    $.ajax
-        complete: (data) ->
-            $.unblockUI()
-            return
+    $(window).load(->
+        $.unblockUI()
+        return
+    )
 
     $(window).resize( ->
         if $(window).width() < 900
