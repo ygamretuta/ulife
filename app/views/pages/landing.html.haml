@@ -24,9 +24,6 @@
           %a.page-scroll{href:'#about'} About
 
         %li
-          %a.page-scroll{href:'#team'} Leaders
-
-        %li
           %a.page-scroll{href:'#contact'} Contact
 
         %li
@@ -229,120 +226,12 @@
                   = link_to 'this link', 'http://www.pranichealing.com.ph/about-us/charitable-foundations', target:'_blank'
                   ="."
 
-
-
-%section#team.bg-light-gray
-  .container
-    .row
-      .col-lg-12.text-center
-        %h2.section-heading Our Norther Luzon / Region 1 Chapter Leaders
-        %h3.section-subheading Leaders are for both Region 1 and Northern Luzon Centers
-
-
-    .row
-      .col-sm-4
-        .team-member
-          = image_tag 'team/jane.jpg', class:'img-responsive img-circle'
-          %h4 Jane Daguman
-          %p.text-muted Manager, Pranic Healer, Basic Pranic Healing Trainer
-
-          %ul.list-inline.social-buttons
-            %li
-              %a{href:'#'}
-                %i.fa.fa-twitter
-            %li
-              %a{href:'#'}
-                %i.fa.fa-facebook
-
-            %li
-              %a{href:'#'}
-                %i.fa.fa-linkedin
-
-      .col-sm-4
-        .team-member
-          = image_tag 'http://placehold.it/225x225', class:'img-responsive img-circle'
-          %h4 Len Regpala
-          %p.text-muted Certified Pranic Healer, Basic Pranic Healing Trainer
-
-          %ul.list-inline.social-buttons
-            %li
-              %a{href:'#'}
-                %i.fa.fa-twitter
-            %li
-              %a{href:'#'}
-                %i.fa.fa-facebook
-
-            %li
-              %a{href:'#'}
-                %i.fa.fa-linkedin
-    .row
-      .col-sm-4
-        .team-member
-          = image_tag 'team/madel.jpg', class:'img-responsive img-circle'
-          %h4 Madeline Retuta
-          %p.text-muted doctor, pranic healer
-          %ul.list-inline.social-buttons
-            %li
-              %a{href:'#'}
-                %i.fa.fa-twitter
-            %li
-              %a{href:'#'}
-                %i.fa.fa-facebook
-
-            %li
-              %a{href:'#'}
-                %i.fa.fa-linkedin
-
-      .col-sm-4
-        .team-member
-          = image_tag 'team/silver.jpg', class:'img-responsive img-circle'
-          %h4 Silverio Retuta
-          %p.text-muted doctor, pranic healer
-          %ul.list-inline.social-buttons
-            %li
-              %a{href:'#'}
-                %i.fa.fa-twitter
-            %li
-              %a{href:'#'}
-                %i.fa.fa-facebook
-
-            %li
-              %a{href:'#'}
-                %i.fa.fa-linkedin
-
-      .col-sm-4
-        .team-member
-          = image_tag 'team/ucc.jpg', class:'img-responsive img-circle'
-          %h4 Grace Bautista
-          %p.text-muted college instructor, Certified Pranic Healer
-          %ul.list-inline.social-buttons
-            %li
-              %a{href:'#'}
-                %i.fa.fa-twitter
-            %li
-              %a{href:'#'}
-                %i.fa.fa-facebook
-
-              %li
-                %a{href:'#'}
-                  %i.fa.fa-linkedin
-
 %section#contact
   .container
     .row{style: 'margin-top: 60px'}
       .col-lg-6.col-lg-push-3
         .quick-contacts
           %h1 Quick Contacts
-
-          %p
-            Email us at
-            = mail_to 'address@example.com'
-
-          %p
-            Region 1 Center
-            %br
-            Madeline Retuta: 09178480448
-
           %p
             Northern Luzon Center
             %br
@@ -355,10 +244,6 @@
             Northern Luzon Pranic Healing Center:
             2A Brent Road, Baguio City
 
-          %p
-            Region 1 Pranic Healing Center:
-            151 Urbiztondo, San Juan La Union
-
 %section#testimonials
   .container
     .row
@@ -366,21 +251,22 @@
         %h2.section-heading Testimonials
         %h3.section-subheading Hear what others have to say!
     .row
-      - if @members.present? && @members['objects'].any?
-        - @members['objects'].each do |m|
+      - if @members.present? && @members.objects.any?
+        - @members.objects.each do |m|
+          - m = m.to_properties
           .col-md-6.testimonial-container
             %blockquote.testimonial
-              %p= m['testimonial'].html_safe
+              %p= m.testimonial.html_safe
             .arrow-down
             .testimonial-author
               .row
                 .col-sm-3
                   .testimonial-author-picture
-                    = image_tag m['thumb'], class: 'img-circle img-thumbnail'
+                    = image_tag m.thumb, class: 'img-circle img-thumbnail'
                 .col-sm-9
-                  = "#{m['name']} | "
+                  = "#{m.name} | "
                   %span
-                    = m['title'].html_safe
+                    = m.title.html_safe
 
 %footer
   .container

@@ -14,6 +14,7 @@ gem 'font-awesome-rails'
 gem 'google-webfonts-rails'
 gem 'httparty'
 gem 'figaro'
+gem 'dot_hash'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'

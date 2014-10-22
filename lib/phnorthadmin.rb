@@ -13,4 +13,10 @@ class Phnorthadmin
   def members
     self.class.get('/member', @options)
   end
+
+  def events
+    @options[:query][:center__name__iexact] = 'Northern Luzon'
+    @options[:query][:limit] = 5
+    self.class.get('/event', @options)
+  end
 end
