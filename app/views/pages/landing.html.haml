@@ -181,7 +181,7 @@
         %h2.section-heading About
         %h3.section-subheading.text-muted
           For more information about pranic healing, please visit the
-          = link_to 'the main website.', 'http://www.pranichealing.com.ph/about-us/what-is-pranic-healing'
+          = link_to 'the main website.', 'http://pranichealing.com.ph/about/'
     .row
       .col-lg-12
         %ul.timeline
@@ -223,7 +223,7 @@
                 %p.text-muted
                   Grand Master Choa Kok Sui, in his desire to help humanity, established this charitable institution to help people in need all over the world through the tithes and resources of grateful students for the priceless teachings and blessings he shared with them.
                   For more details, please visit:
-                  = link_to 'this link', 'http://www.pranichealing.com.ph/about-us/charitable-foundations', target:'_blank'
+                  = link_to 'this link', 'http://pranichealing.com.ph/about/', target:'_blank'
                   ="."
 
 %section#contact
@@ -231,14 +231,12 @@
     .row{style: 'margin-top: 60px'}
       .col-lg-6.col-lg-push-3
         .quick-contacts
-          %h1 Quick Contacts
+          %h1 Contact Us
           %p
             Northern Luzon Center
             %br
-            Jane: 0947-450-2037
+            Jane: 0947-450-2037 |
             Len: 0927-203-8752
-
-          %p Region 1 Center Landline: (072) 607-04-80
 
           %p
             Northern Luzon Pranic Healing Center:
@@ -277,20 +275,10 @@
       .col-md-4
         %ul.list-inline.social-buttons
           %li
-            %a{:href => "#"}
-              %i.fa.fa-twitter
+            %a{:href => "https://www.youtube.com/channel/UC2myvK61cHn9BxgSzfB7peg", target: '_blank'}
+              %i.fa.fa-youtube
           %li
-            %a{:href => "#"}
+            %a{:href => "https://www.facebook.com/pranicphilippines", target: '_blank'}
               %i.fa.fa-facebook
-          %li
-            %a{:href => "#"}
-              %i.fa.fa-linkedin
-
-      .col-md-4
-        %ul.list-inline.quicklinks
-          %li
-            %a{href:'#'}Privacy Policy
-          %li
-            %a{href:'#'}Terms of Use
 
 = render 'portfolios'

@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap/scrollspy
 //= require bootstrap/modal
+//= require bootstrap/collapse
 
 //= require classie
 //= require cbpAnimatedHeader
