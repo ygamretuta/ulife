@@ -265,6 +265,8 @@
                   = "#{m.name} | "
                   %span
                     = m.title.html_safe
+      - else
+        %p There was a problem fetching data. Please try again later.
 
 %footer
   .container

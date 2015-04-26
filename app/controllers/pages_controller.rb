@@ -3,9 +3,12 @@ require 'phnorthadmin'
 class PagesController < ApplicationController
   def landing
     api = Phnorthadmin.new
-    members_json = JSON.parse api.members.body
-    @members = members_json.to_properties
-  rescue
     @members = nil
+    request = api.members
+
+    if request_response
+      members_json = JSON.parse request.body
+      @members = members_json.to_properties
+    end
   end
 end

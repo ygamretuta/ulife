@@ -11,7 +11,15 @@ class Phnorthadmin
   end
 
   def members
-    self.class.get('/member', @options)
+    begin
+      self.class.get('/member', @options)
+    rescue HTTParty::Error => e
+      # log error later
+      false
+    rescue StandardError => e
+      # log error later
+      false
+    end
   end
 
   def events
