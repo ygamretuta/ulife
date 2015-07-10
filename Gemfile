@@ -29,7 +29,6 @@ group :development do
   gem 'better_errors'
   gem 'awesome_print'
   gem 'capistrano-rails'
-  gem 'capistrano-bundler', '~> 1.1.2'
 end
 
 group :development, :test do
