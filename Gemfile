@@ -28,6 +28,7 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'better_errors'
   gem 'awesome_print'
+  gem 'capistrano-rails'
 end
 
 group :development, :test do

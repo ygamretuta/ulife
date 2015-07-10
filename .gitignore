@@ -6,17 +6,25 @@
 
 # Ignore bundler config.
 /.bundle
-
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
-
 # Ignore all logfiles and tempfiles.
-/log/*.log
+/log/*
+!/log/.keep
 /tmp
-
-.idea/
-
+# Ignore bundler files
+/vendor/bundle
+# Ignore jetbrains dirs
+/.idea
 # Ignore application configuration
 /config/application.yml
-/vendor/bundle
+/config/database.yml
+/config/secrets.yml
+# Ignore Capistrano files
+/.capistrano
+/config/deploy
+/config/deploy.rb
+Capfile
+# Ignore bower-rails files
+vendor/assets/bower_components/
