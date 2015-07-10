@@ -15,6 +15,7 @@ gem 'google-webfonts-rails'
 gem 'httparty'
 gem 'figaro'
 gem 'dot_hash'
+gem 'sqlite3'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -22,7 +23,6 @@ end
 
 group :development do
   gem 'quiet_assets'
-  gem 'sqlite3'
   gem 'spring'
   gem 'rack-livereload'
   gem 'guard-livereload', require: false
