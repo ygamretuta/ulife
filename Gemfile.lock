@@ -213,6 +213,7 @@ DEPENDENCIES
   awesome_print
   better_errors
   bootstrap-sass
+  capistrano-bundler (~> 1.1.2)
   capistrano-rails
   coffee-rails (~> 4.0.0)
   debugger
