@@ -1,6 +1,6 @@
 class Phnorthadmin
   include HTTParty
-  base_uri Rails.env.production? ? 'phnorthadmin.herokuapp.com/api/v1':'localhost:8000/api/v1'
+  base_uri 'phnorthadmin.herokuapp.com/api/v1'
 
   EXCEPTIONS = [HTTParty::Error, StandardError, SocketError]
 
