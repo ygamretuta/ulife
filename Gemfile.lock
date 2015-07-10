@@ -127,7 +127,6 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.2)
-    newrelic_rpm (3.9.5.251)
     non-stupid-digest-assets (1.0.4)
     pg (0.17.1)
     pry (0.10.1)
@@ -225,7 +224,6 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.0)
   jquery-rails
-  newrelic_rpm
   non-stupid-digest-assets
   pg
   quiet_assets
