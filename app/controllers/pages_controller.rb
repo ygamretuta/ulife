@@ -6,7 +6,10 @@ class PagesController < ApplicationController
     @members = nil
     request = api.members
 
+    debugger
+
     if request
+      puts request.body
       members_json = JSON.parse request.body
       @members = members_json.to_properties
     end

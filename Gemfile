@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.6'
+gem 'rails', '~> 4.1'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -16,6 +16,7 @@ gem 'httparty'
 gem 'figaro'
 gem 'dot_hash'
 gem 'sqlite3'
+gem 'eventmachine', '~> 1.2'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -25,14 +26,13 @@ group :development do
   gem 'quiet_assets'
   gem 'spring'
   gem 'rack-livereload'
-  gem 'guard-livereload', require: false
   gem 'better_errors'
   gem 'awesome_print'
   gem 'capistrano-rails'
 end
 
 group :development, :test do
-  gem 'debugger'
+  # gem 'debugger'
 end
 
 group :production do
